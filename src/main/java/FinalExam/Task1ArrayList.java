@@ -59,7 +59,7 @@ public class Task1ArrayList {
     }
 
     public void SortingLT(List<Student> list) {
-        List<Student> st1 = list.stream().sorted(Comparator.comparing(Student::getLt)).distinct().limit(10).collect(Collectors.toList());
+        List<Student> st1 = list.stream().sorted(Comparator.comparing(Student::getLt).reversed()).distinct().limit(10).collect(Collectors.toList());
         int index = 0;
         for (Student sv : st1
         ) {
@@ -78,8 +78,10 @@ public class Task1ArrayList {
         }
     }
 
+    }
 
-}
+
+
 
 
 
